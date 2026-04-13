@@ -1,0 +1,186 @@
+/* CSS DOCUMENT */
+@charset "UTF-8";
+
+/* configuraciones generales */
+@font-face {
+    font-family: "reactor bold";
+    src: url("fonts/RST\ Reactor\ -\ Bold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "reactor ligth italic";
+    src: url("fonts/RST\ Reactor\ -\ Light\ Italic.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "brush";
+    src: url("fonts/brushscriptstd.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "cour";
+    src: url("fonts/cour.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "cour bold";
+    src: url("fonts/courbd.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "cour italic";
+    src: url("fonts/courbi.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "cour bold italic";
+    src: url("fonts/couri.ttf") format("truetype");
+}
+
+* {
+    font-family: "Public Sans", sans-serif;
+}
+/* APLICACIONES */
+img {
+    width: 1000px;
+    height: auto;
+    
+}
+
+body {
+    /*background-image: url("img/Recurso 1.jpg");
+    background-size: cover;+/
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(214, 214, 214);*/
+
+    background-color: rgb(243, 243, 243);
+}
+
+/* TIPOGRAFÍA */
+
+#cabecera{
+    background-color: rgba(23, 223, 56, 0.068);
+    width: auto;
+    height:auto;
+    padding: 130px;
+    margin: 5rem;
+    margin-bottom: 1rem;
+    
+} 
+#cabecera h2 {
+    padding: 5rem;
+    margin: rem;
+}
+#sobre-mi{
+    padding: 3rem;
+    margin: 1rem;
+    background-color: rgba(143, 49, 231, 0.199);
+
+}
+#sobre-mi h2 {
+    text-align: center;
+    
+    
+}
+#sobre-mi p {
+    text-align: center;
+    padding: 3rem;
+    margin: 1rem;
+}
+#portfolio h2 {
+    font-size: 10rem;
+    text-align: center;
+    padding: 3rem;
+    margin: 1rem;
+}
+
+
+h1 {
+    font-family: "reactor bold", sans;
+    font-size: 6rem;
+    color: rgb(112, 112, 112);
+    line-height: 5.5rem;
+
+}
+
+h2 {
+    font-family: "reactor ligth italic", sans-serif;
+    font-style: ligth-italic;
+    font-weight: 50;
+    font-size: 3rem;
+    color: rgb(58, 58, 58);
+}
+
+
+
+h3 {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2.3rem;
+    color: black;
+}
+
+p {
+    text-wrap-style: balance;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* NAV */
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    list-style: none;
+    padding: 1rem;
+    background: rgba(249, 71, 255, 0.199);
+}
+
+
+nav a {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    text-align: center;
+    
+    
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 20rem;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: rgb(54, 54, 54);
+    text-decoration: none;
+}
