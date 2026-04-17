@@ -5,39 +5,60 @@
     <meta charset="UTF-8">
     <title>MICAELA NUÑEZ</title>
     <link rel="stylesheet" href="estilos.css">
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=League+Script&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Meow+Script&family=Ms+Madi&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Send+Flowers&display=swap');
     </style>
 </head>
 
 <body>
-
     <!-- HEADER -->
-    <header id="cabecera">
+    <header>
         <h1>MICAELA NUÑEZ/</h1>
-        <h2>Diseñadora gráfica</h2>
-        
-    <nav class="botonera">
-    <ul>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-</nav>
-
+        <h2 class="subtitulo-header">Diseñadora gráfica</h2>
+        <nav>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
     <!-- CONTENIDO -->
     <main>
-
         <!-- SOBRE MI -->
         <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <p>Estudiante de Diseño y Comunicación Visual, en la Universidad Nacional de Lanús, con estudios en Artes
-                Visuales, en la Universidad Nacional de las Artes. Me caracterizo por una mirada creativa, pensamiento
-                crítico y un fuerte compromiso con cada proyecto.
-            </p>
+            <div class="fila-seccion">
+                <h2>Sobre mí</h2>
+                <p>Estudiante de Diseño y Comunicación Visual, con base
+                    en Artes Visuales. Me caracterizo por una mirada creativa,
+                    pensamiento crítico y un fuerte compromiso con cada
+                    proyecto. Trabajo con atención al detalle, capacidad de
+                    adaptación y buen desempeño tanto en equipos como de
+                    forma autónoma. Resido en Lomas de Zamora y cuento
+                    con disponibilidad inmediata full-time o part-time.
+                </p>
+            </div>
+            <div class="fila-seccion">
+                <h2>Formación</h2>
+                <p>Universidad Nacional de Lanús 2020 |
+
+                    Licenciatura en Diseño y Comunicación Visual. 40%.
+
+                    Universidad Nacional de las Artes 2016 / 2019
+
+                    Licenciatura en Artes Visuales con orientación en
+                    Grabado y Arte impreso. 40% de la carrera.
+                </p>
+            </div>
+            <div class="fila-seccion">
+                <h2>Trabajos</h2>
+                <p> Diseñadora Jr | 5ta Gráfica – 2022
+                    Desarrollé piezas gráficas para medios digitales e impresos, creando
+soluciones visuales a medida en cada proyecto. Realicé ilustraciones
+digitales y acompañé los procesos desde la idea inicial hasta la entrega
+final. También brindé atención y asesoramiento, cuidando tanto el
+resultado visual como la experiencia del cliente, y trabajé con equipos de
+impresión garantizando la calidad de cada producción.</p>
+            </div>
         </section>
 
         <!-- PORTFOLIO -->
@@ -46,94 +67,116 @@
 
             <!-- BRANDING -->
             <article>
-                <h3>Branding//</h3>
-                <section>
-                    <h4>Festival de Cine Fulgor</h4>
-                    <p>Proyecto académico de identidad visual para festival de cine. Realizado en 2024.</p>
-                    <img src="img/festival_cine_1.jpg" alt=" festival_cine_1" width="1000" height="auto">
-                    <img src="img/festival_cine_2.jpg" >
-                    <img src="img/festival_cine_3.jpg">
-                    <img src="img/festival_cine_4.jpg">
-                </section>
+                <h3>Branding</h3>
+                <div class="proyecto">
+                    <div class="proyecto-texto">
+                        <h4>Festival de Cine Fulgor</h4>
+                        <p>Proyecto académico de identidad visual para festival de cine. Realizado en 2024.</p>
+                    </div>
+                    <div class="proyecto-imagenes">
+                        <img src="img/festival_cine_1.jpg" alt="Festival de Cine Fulgor 1">
+                        <img src="img/festival_cine_2.jpg" alt="Festival de Cine Fulgor 2">
+                        <img src="img/festival_cine_3.jpg" alt="Festival de Cine Fulgor 3">
+                        <img src="img/festival_cine_4.jpg" alt="Festival de Cine Fulgor 4">
+                    </div>
+                </div>
             </article>
 
             <!-- EDITORIAL -->
             <article>
-                <h3>Editorial//</h3>
-
-                <section>
-                    <h4>Bookzine</h4>
-                    <p>Proyecto académico realizado en 2025.</p>
-                    <img src="img/bookzine Mockup_Página_1.jpg">
-                    <img src="img/bookzine Mockup_Página_2.jpg">
-                </section>
-
-                <section>
-                    <h4>Programa</h4>
-                    <p>Proyecto académico realizado en 2025.</p>
-                    <img src="img/editorial_programa_1.jpg">
-                    <img src="img/editorial_programa_2.jpg">
-                    <img src="img/editorial_programa_3.jpg">
-                </section>
-
-                <section>
-                    <h4>Fanzine</h4>
-                    <p>Proyecto sobre educación pública.</p>
-                    <img src="img/Afiche_sillas.jpg">
-                    <img src="img/fanzine_sillas.gif">
-                </section>
+                <h3>Editorial</h3>
+                <div class="proyecto">
+                    <div class="proyecto-texto">
+                        <h4>Bookzine</h4>
+                        <p>Proyecto académico realizado en 2025.</p>
+                    </div>
+                    <div class="proyecto-imagenes">
+                        <img src="img/bookzine Mockup_Página_1.jpg" alt="Bookzine página 1">
+                        <img src="img/bookzine Mockup_Página_2.jpg" alt="Bookzine página 2">
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <div class="proyecto-texto">
+                        <h4>Programa</h4>
+                        <p>Proyecto académico realizado en 2025.</p>
+                    </div>
+                    <div class="proyecto-imagenes">
+                        <img src="img/editorial_programa_1.jpg" alt="Programa editorial 1">
+                        <img src="img/editorial_programa_2.jpg" alt="Programa editorial 2">
+                        <img src="img/editorial_programa_3.jpg" alt="Programa editorial 3">
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <div class="proyecto-texto">
+                        <h4>Fanzine</h4>
+                        <p>Proyecto sobre educación pública.</p>
+                    </div>
+                    <div class="proyecto-imagenes">
+                        <img src="img/Afiche_sillas.jpg" alt="Afiche sillas">
+                        <img src="img/fanzine_sillas.gif" alt="Fanzine sillas">
+                    </div>
+                </div>
             </article>
 
             <!-- AFICHES -->
             <article>
-                <h3>Afiches//</h3>
-
-                <section>
-                    <h4>Steps</h4>
-                    <p>Poster realizado en 2025 para el 29th International Poster Biennale in Warsaw, International
-                        Students Copetition. Bajo la tutoría del estudio de diseño argentino, El Fantasma de Heredia.
-                        La temática de este proyecto contempla la mirada de los jovenes hacía el futuro.</p>
-                    <img src="img/afiche_fantasma_heredia.jpg">
-
-                    <h4>URGE!</h4>
-                    <p>Participe como estudiante de diseño en la muestra colectiva
-                        URGE! Diseño para la emergencia ambiental es un proyecto amplio,
-                        dinámico y colaborativo que reúne a diseñadoras, diseñadores y artistas
-                        visuales de Chile y Argentina, preocupados por el cambio climático, la preservación
-                        del planeta y el cuidado de la naturaleza. También convoca a los estudiantes de la Universidad
-                        de Playa Ancha, en El Museo Universitario
-                        de Diseño (MUD) de la UNLa.</p>
-                    <img src="img/afiche_urge.jpg">
-
-                    <h4>Encuentro</h4>
-                    <p>Este afiche fue realizado para el Festival Internacional de la Imagen Mexico 2026, en el cual
-                        quede finalista. Para este proyecto partí del concepto de la cultura como algo que nace y se
-                        gesta en comunidad. Es el encuentro con el otro, con los que están y con que ya no.
-                        Es donde se cruza lo compartido y empieza a transformarse.
-                        Como escribe Octavio Paz:"Para que pueda ser he de ser otro, salir de mí buscarme entre los
-                        otros."</p>
-                    <img src="img/afiche_cultura.jpg">
-                </section>
-
+                <h3>Afiches</h3>
+                <div class="proyecto">
+                    <div class="proyecto-texto">
+                        <h4>Steps</h4>
+                        <p>Poster realizado en 2025 para el 29th International Poster Biennale in Warsaw, International
+                            Students Copetition. Bajo la tutoría del estudio de diseño argentino, El Fantasma de
+                            Heredia.
+                            La temática de este proyecto contempla la mirada de los jovenes hacía el futuro.</p>
+                    </div>
+                    <div class="proyecto-imagenes">
+                        <img src="img/afiche_fantasma_heredia.jpg" alt="Afiche Steps">
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <div class="proyecto-texto">
+                        <h4>URGE!</h4>
+                        <p>Participe como estudiante de diseño en la muestra colectiva
+                            URGE! Diseño para la emergencia ambiental es un proyecto amplio,
+                            dinámico y colaborativo que reúne a diseñadoras, diseñadores y artistas
+                            visuales de Chile y Argentina, preocupados por el cambio climático, la preservación
+                            del planeta y el cuidado de la naturaleza. También convoca a los estudiantes de la
+                            Universidad
+                            de Playa Ancha, en el Museo Universitario de Diseño (MUD) de la UNLa.</p>
+                    </div>
+                    <div class="proyecto-imagenes">
+                        <img src="img/afiche_urge.jpg" alt="Afiche URGE">
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <div class="proyecto-texto">
+                        <h4>Encuentro</h4>
+                        <p>Este afiche fue realizado para el Festival Internacional de la Imagen Mexico 2026, en el cual
+                            quede finalista. Para este proyecto partí del concepto de la cultura como algo que nace y se
+                            gesta en comunidad. Es el encuentro con el otro, con los que están y con que ya no.
+                            Es donde se cruza lo compartido y empieza a transformarse.
+                            Como escribe Octavio Paz: "Para que pueda ser he de ser otro, salir de mí buscarme entre los
+                            otros."</p>
+                    </div>
+                    <div class="proyecto-imagenes">
+                        <img src="img/afiche_cultura.jpg" alt="Afiche Encuentro">
+                    </div>
+                </div>
             </article>
 
         </section>
-
     </main>
 
     <!-- FOOTER -->
     <footer id="contacto">
         <h2>Contacto</h2>
-
         <ul>
             <li><a href="https://www.instagram.com/xmicaelax_" target="_blank">Instagram</a></li>
             <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
             <li><a href="https://www.behance.net/micaelabnz" target="_blank">Behance</a></li>
         </ul>
-
         <p>Cátedra Wischñevsky — 2026</p>
     </footer>
-
 </body>
 
 </html>
