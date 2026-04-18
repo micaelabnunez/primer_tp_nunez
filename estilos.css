@@ -52,25 +52,25 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: rgb(214, 214, 214);*/
+    color: rgb(214, 214, 214);*/ /* no dejes líneas comentadas para la entrega final */
     background-color: rgb(243, 243, 243);
 }
 
 /* HEADER */
 header {
-  /*  background-color: rgba(23, 223, 56, 0.068);*/
+  /*  background-color: rgba(23, 223, 56, 0.068);*/ /* no dejes líneas comentadas para la entrega final */
         max-width: 1200px;
     margin: 100px auto 100px auto;
     padding: 40px;
 }
 header h1 {
-    margin-bottom: 0;
+    margin-bottom: 0; /* guarda que más abajo en la 123 tenés el h1 declarado también, no deberías repetir el mismo elemento en dos lugares distintos */
 }
-header h2 {
+header h2 { /* idem repetir en la 76 */
     padding: 20px;
     margin: 0;
 }
-nav {
+nav { /* idem repetir en la 167 */
     margin-top: 80px;
 }
 .subtitulo-header {
@@ -86,7 +86,7 @@ nav {
 }
 
 #sobre-mi h2 {
-    text-align: left;
+    text-align: left; /* repetís en la línea 99 */
 }
 
 .fila-seccion {
@@ -114,7 +114,7 @@ nav {
 }
 #portfolio h2 {
     font-size: 6rem;
-    text-align: center;
+    text-align: center; /* repetís en 131 */
     padding: 30px;
     margin: 100px;
 }
@@ -138,7 +138,7 @@ h2 {
 }
 
 h3 {
-    display: flex;
+    display: flex; /* no tiene sentido que una etiqueta de texto tenga flex, ojo con la info que saques de figma */
     font-weight: 100;
     font-style: italic;
     font-size: 2rem;
@@ -173,12 +173,12 @@ nav {
 }
 
 nav a {
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'Public Sans', sans-serif; /* guarda con repetir propiedades en selectores distintos, vos ya declaraste en la línea 40 con el selector universal que la font family para todo sea esta, no hace falta que lo repitas acá porque ya se hereda */
     font-weight: 100;
     font-style: italic;
     color: rgb(51, 51, 51);
     text-decoration: none;
-    text-align: center;
+    text-align: center; /* esta propiedad no produce cambios */
 }
 
 /* PROYECTOS */
@@ -210,7 +210,7 @@ nav a {
 
 /* FOOTER */
 footer {
-    margin-top: 200px;
+    margin-top: 200px; /* guarda! alerta de margin muy grande. Acordate que no pueden superar los 80 o 100px de altura, si tenés que resolver tamaños lo tenés que resolver desde otro lado */
     padding: 40px;
     max-width: 1200px;
     margin-left: auto;
@@ -233,7 +233,7 @@ footer ul {
 }
 
 footer a {
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'Public Sans', sans-serif; /* no repitas! */
     font-weight: 100;
     font-style: italic;
     color: rgb(51, 51, 51);
