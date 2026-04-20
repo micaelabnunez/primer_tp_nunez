@@ -1,124 +1,112 @@
 /* CSS DOCUMENT */
 @charset "UTF-8";
-
+ 
 /* configuraciones generales */
 @font-face {
     font-family: "reactor bold";
     src: url("fonts/RST\ Reactor\ -\ Bold.otf") format("truetype");
 }
-
+ 
 @font-face {
     font-family: "reactor ligth italic";
     src: url("fonts/RST\ Reactor\ -\ Light\ Italic.otf") format("truetype");
 }
-
+ 
 @font-face {
     font-family: "brush";
     src: url("fonts/brushscriptstd.ttf") format("truetype");
 }
-
+ 
 @font-face {
     font-family: "cour";
     src: url("fonts/cour.ttf") format("truetype");
 }
-
+ 
 @font-face {
     font-family: "cour bold";
     src: url("fonts/courbd.ttf") format("truetype");
 }
-
+ 
 @font-face {
     font-family: "cour italic";
     src: url("fonts/courbi.ttf") format("truetype");
 }
-
+ 
 @font-face {
     font-family: "cour bold italic";
     src: url("fonts/couri.ttf") format("truetype");
 }
-
+ 
 * {
     font-family: "Public Sans", sans-serif;
 }
-
+ 
 /* APLICACIONES */
 img {
     width: 1000px;
     height: auto;
 }
-
+ 
 body {
-    /*background-image: url("img/Recurso 1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: rgb(214, 214, 214);*/
     background-color: rgb(243, 243, 243);
 }
-
+ 
 /* HEADER */
 header {
-  /*  background-color: rgba(23, 223, 56, 0.068);*/
-        max-width: 1200px;
-    margin: 100px auto 100px auto;
-    padding: 40px;
+    max-width: 1200px;
+    margin: 100px auto;
 }
-header h1 {
-    margin-bottom: 0;
-}
+ 
+header h1,
 header h2 {
-    padding: 20px;
-    margin: 0;
+    padding: 0 40px;
 }
-nav {
-    margin-top: 80px;
-}
+ 
 .subtitulo-header {
     font-size: 4rem;
-    padding: 0;
-    margin: 0;
 }
-
+ 
 #sobre-mi {
     padding: 40px;
     margin: 10px;
     background-color: rgba(143, 49, 231, 0.199);
 }
-
+ 
 #sobre-mi h2 {
     text-align: left;
 }
-
+ 
 .fila-seccion {
     display: flex;
     gap: 40px;
     padding: 30px 0;
     border-top: 1px solid rgb(58, 58, 58);
 }
-
+ 
 .fila-seccion h2 {
     flex: 1;
     text-align: left;
 }
-
+ 
 .fila-seccion p {
     flex: 2;
     padding: 0;
     margin: 0;
 }
-
-
+ 
 #portfolio article {
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
     margin: 10px;
 }
+ 
 #portfolio h2 {
     font-size: 6rem;
     text-align: center;
     padding: 30px;
     margin: 100px;
 }
-
+ 
 /* TIPOGRAFÍA */
 h1 {
     font-family: "reactor bold", sans;
@@ -126,8 +114,9 @@ h1 {
     color: rgb(112, 112, 112);
     line-height: 5.5rem;
     text-align: center;
+    margin-bottom: 0;
 }
-
+ 
 h2 {
     font-family: "reactor ligth italic", sans-serif;
     font-style: italic;
@@ -136,16 +125,15 @@ h2 {
     color: rgb(58, 58, 58);
     text-align: center;
 }
-
+ 
 h3 {
-    display: flex;
     font-weight: 100;
     font-style: italic;
     font-size: 2rem;
     color: rgb(0, 0, 0);
     border-bottom: 1px solid rgb(58, 58, 58);
 }
-
+ 
 h4 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -154,33 +142,31 @@ h4 {
     font-size: 2.3rem;
     color: black;
 }
-
+ 
 p {
-    display: flex;
     text-wrap-style: balance;
     font-weight: 400;
     font-size: 1.11rem;
     line-height: 1.5rem;
 }
-
+ 
 /* NAV */
 nav {
     display: flex;
     justify-content: center;
     gap: 80px;
     padding: 16px;
+    margin-top: 80px;
     background: rgba(249, 71, 255, 0.199);
 }
-
+ 
 nav a {
-    font-family: 'Public Sans', sans-serif;
     font-weight: 100;
     font-style: italic;
     color: rgb(51, 51, 51);
     text-decoration: none;
-    text-align: center;
 }
-
+ 
 /* PROYECTOS */
 .proyecto {
     display: flex;
@@ -190,59 +176,61 @@ nav a {
     border-top: 1px solid rgb(58, 58, 58);
     align-items: flex-start;
 }
-
+ 
 .proyecto-texto {
     flex: 1;
 }
-
+ 
 .proyecto-imagenes {
     flex: 2;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-
+ 
 .proyecto-imagenes img {
     width: 100%;
     height: auto;
     display: block;
 }
-
+ 
 /* FOOTER */
 footer {
-    margin-top: 200px;
-    padding: 40px;
+    margin-top: 80px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
-
+ 
 footer h2 {
     font-size: 1.7rem;
     border-bottom: 1px solid rgb(58, 58, 58);
     padding-bottom: 8px;
     margin-bottom: 16px;
 }
-
+ 
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
 footer ul {
     display: flex;
-    flex-direction: row;
     gap: 80px;
     list-style: none;
     padding: 0;
 }
-
+ 
 footer a {
-    font-family: 'Public Sans', sans-serif;
     font-weight: 100;
     font-style: italic;
     color: rgb(51, 51, 51);
     text-decoration: none;
 }
-
+ 
 footer p {
   display: flex;
     justify-content: right;  margin-top: 16px;
     font-size: 0.9rem;
     color: rgb(160, 160, 160);
-}

@@ -8,3 +8,8 @@ Como estuve sin trabajo, este verano decidí aprender figma. Hice una especie de
 Sinceramente atrase muchisimo, hasta html venía bien, pero sigo sin entender del todo css. Tuve que ver varias veces las clases para ponerme mas o menos al día, que esta mal porque no llego a lo esperado.  La verdad que mientras voy repasando las clases voy entendiendo varias cuestiones. Puedo distinguir el por qué que de ciertas cosas cuando las veo. 
 
 Tener de referencia a figma para ver me gusta porque siento que ordena a pesar de descartar la idea principal, ayuda.
+Editora de código: Visual Studio Code
+
+
+Tamaño de pantalla: 1920 x 1200px (Dell Vostro 14)
+Repositorio: https://github.com/micaelabnunez/primer_tp_nunez
