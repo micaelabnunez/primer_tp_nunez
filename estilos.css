@@ -1,237 +1,885 @@
-/* CSS DOCUMENT */
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300;1,400&family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* tipos */
+@font-face {
+  font-family: 'RST Reactor';
+  src: url('font/RST Reactor - Regular Italic.otf') format('opentype');
+}
+
+/*
+ Esta no va 
+@font-face {
+  font-family: 'RST Reactor Italic';
+  src: url('font/RST\ Reactor\ -\ Regular\ Italic.otf Italic.otf') format('opentype');
+}
+*/
 /* configuraciones generales */
-@font-face {
-    font-family: "reactor bold";
-    src: url("fonts/RST\ Reactor\ -\ Bold.otf") format("truetype");
-}
-
-@font-face {
-    font-family: "reactor ligth italic";
-    src: url("fonts/RST\ Reactor\ -\ Light\ Italic.otf") format("truetype");
-}
-
-@font-face {
-    font-family: "brush";
-    src: url("fonts/brushscriptstd.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "cour";
-    src: url("fonts/cour.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "cour bold";
-    src: url("fonts/courbd.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "cour italic";
-    src: url("fonts/courbi.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "cour bold italic";
-    src: url("fonts/couri.ttf") format("truetype");
-}
-
 * {
-    font-family: "Public Sans", sans-serif;
-}
-
-/* APLICACIONES */
-img {
-    width: 1000px;
-    height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(243, 243, 243);
+  background: linear-gradient(180deg, #ffeaff, #fff9f9);
+  font-family: 'DM Mono', monospace;
+  color: black;
+  overflow-x: hidden;
 }
 
-/* HEADER */
+/* variables */
+:root {
+  --purple: #9747FF;
+  --violeta-claro: #DABEFF;
+  --gray-dark: #383838;
+  --gray-mid: #363636;
+  --gray-light: #d9d9d9;
+  --gray-footer: #5e5b60;
+  --bg: #F5F5F5;
+  --negro-nav: rgba(46, 45, 45, 0.677);
+}
+
+
+/* ===== HEADER Y NAV ===== */
+
 header {
-    max-width: 1200px;
-    margin: 100px auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 59px 60px 0 60px;
 }
 
-header h1,
-header h2 {
-    padding: 0 40px;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
 }
 
-.subtitulo-header {
-    font-size: 4rem;
+nav ul li a {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.94rem;
+  color: var(--negro-nav);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
 }
 
-#sobre-mi {
-    padding: 40px;
-    margin: 10px;
-    background-color: rgba(143, 49, 231, 0.199);
+/* subrayado animado en hover */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--purple);
+  transition: width 0.25s ease;
 }
 
-#sobre-mi h2 {
-    text-align: left;
+nav ul li a:hover {
+  color: black;
 }
 
-.fila-seccion {
-    display: flex;
-    gap: 40px;
-    padding: 30px 0;
-    border-top: 1px solid rgb(58, 58, 58);
+nav ul li a:hover::after {
+  width: 100%;
 }
 
-.fila-seccion h2 {
-    flex: 1;
-    text-align: left;
+/* link de la pagina actual */
+nav ul li a.activo {
+  color: black;
 }
 
-.fila-seccion p {
-    flex: 2;
-    padding: 0;
-    margin: 0;
+nav ul li a.activo::after {
+  width: 100%;
+  background: black;
 }
 
-#portfolio article {
-    padding-left: 40px;
-    padding-right: 40px;
-    margin: 10px;
+/* menu desplegable de portfolio */
+.nav-portfolio {
+  position: relative;
 }
 
-#portfolio h2 {
-    font-size: 6rem;
-    text-align: center;
-    padding: 30px;
-    margin: 100px;
+.nav-portfolio .desplegable {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bg);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  min-width: 160px;
+  z-index: 100;
+  flex-direction: column;
 }
 
-/* TIPOGRAFÍA */
-h1 {
-    font-family: "reactor bold", sans;
-    font-size: 6rem;
-    color: rgb(112, 112, 112);
-    line-height: 5.5rem;
-    text-align: center;
-    margin-bottom: 0;
+.nav-portfolio:hover .desplegable {
+  display: flex;
 }
 
-h2 {
-    font-family: "reactor ligth italic", sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 2rem;
-    color: rgb(58, 58, 58);
-    text-align: center;
+.nav-portfolio .desplegable a {
+  padding: 10px 16px;
+  font-size: 0.81rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.10);
+  color: var(--negro-nav);
+  white-space: nowrap;
 }
 
-h3 {
-    font-weight: 100;
-    font-style: italic;
-    font-size: 2rem;
-    color: rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(58, 58, 58);
+.nav-portfolio .desplegable a:last-child {
+  border-bottom: none;
 }
 
-h4 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 2.3rem;
-    color: black;
+.nav-portfolio .desplegable a:hover {
+  color: black;
+  background: var(--violeta-claro);
 }
 
-p {
-    text-wrap-style: balance;
-    font-weight: 400;
-    font-size: 1.11rem;
-    line-height: 1.5rem;
+
+/* ===== SCROLLING TEXT ===== */
+
+.ticker-wrap {
+  width: 100%;
+  background: var(--gray-light);
+  overflow: hidden;
+  height: 30px;
+  margin: 10px 0;
+  position: relative;
 }
 
-/* NAV */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    padding: 16px;
-    margin-top: 80px;
-    background: rgba(249, 71, 255, 0.199);
+.ticker-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+  color: var(--purple);
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.94rem;
+  line-height: 30px;
+
 }
 
-nav a {
-    font-weight: 100;
-    font-style: italic;
-    color: rgb(51, 51, 51);
-    text-decoration: none;
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-/* PROYECTOS */
+
+/* ===== HERO ===== */
+
+.page-hero {
+  margin: 100px;
+  padding: 30px 0 0 70px;
+  animation: aparecer 0.7s ease both;
+}
+
+.page-hero .star {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 6.25rem;
+  color: var(--gray-dark);
+  line-height: 1;
+}
+
+.page-hero h1 {
+  font-family: 'RST Reactor regular', 'RST Reactor', 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 12rem;
+  font-weight: 400;
+  line-height: 1;
+  color: black;
+}
+
+.page-hero .subtitle {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.94rem;
+  color: var(--gray-dark);
+  margin-top: 16px;
+}
+
+
+/* ===== ENCABEZADO DE SUBPAGINAS ===== */
+
+.encabezado-pagina {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 60px 60px 0;
+}
+
+.encabezado-pagina .star {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 8rem;
+  color: var(--gray-dark);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.encabezado-pagina h1 {
+  font-family: 'RST Reactor regular-', 'RST Reactor', 'DM Serif Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 5.625rem;
+  line-height: 1;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.encabezado-pagina .subtitle {
+  font-family: 'Consolas', monospace;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--gray-mid);
+}
+
+
+/* ===== TITULOS DE SECCION ===== */
+
+.section-title {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid black;
+  margin-bottom: 24px;
+}
+
+
+/* ===== PAGINA SOBRE MI ===== */
+
+.sobre-mi-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 60px 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* divisor vertical entre columnas */
+.columna-divisor {
+  width: 1px;
+  background: black;
+  align-self: stretch;
+}
+
+.columna-izq,
+.columna-der {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* bloque de bio con fondo violeta */
+.bloque-bio {
+  background: var(--violeta-claro);
+  padding: 36px;
+}
+
+.bloque-bio p {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: black;
+}
+
+/* formacion */
+.edu-anio {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--purple);
+  margin-bottom: 4px;
+}
+
+.edu-institucion {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.52rem;
+  line-height: 1.1;
+  color: black;
+  margin-bottom: 6px;
+}
+
+.edu-carrera {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* experiencia */
+.exp-rol {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.52rem;
+  line-height: 1.1;
+  color: black;
+  margin-bottom: 4px;
+}
+
+.exp-lugar {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+.exp-descripcion {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: black;
+  margin-bottom: 24px;
+}
+
+/* habilidades */
+.habilidades {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.habilidad {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.94rem;
+  padding: 6px 12px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: var(--violeta-claro);
+  color: black;
+  transition: background 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.habilidad:hover {
+  background: var(--purple);
+  color: white;
+}
+
+
+/* ===== PORTFOLIO (indice de categorias) ===== */
+
+.categorias {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 60px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoria-item {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  padding: 40px 0;
+  border-top: 1px solid black;
+  align-items: flex-start;
+  text-decoration: none;
+  color: black;
+}
+
+.categoria-item:hover .categoria-nombre {
+  color: var(--purple);
+}
+
+.categoria-item:hover .btn-ver {
+  background: var(--purple);
+  color: white;
+  border-color: var(--purple);
+}
+
+.categoria-nombre {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3rem;
+  color: black;
+  transition: color 0.2s;
+  flex: 1;
+}
+
+.categoria-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 10px;
+}
+
+.categoria-info p {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.81rem;
+  color: var(--gray-mid);
+  line-height: 1.7;
+}
+
+
+/* ===== PROYECTOS ===== */
+
 .proyecto {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    padding: 30px 0;
-    border-top: 1px solid rgb(58, 58, 58);
-    align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 60px;
+  margin-bottom: 80px;
 }
 
+.proyecto-fila {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  padding: 40px 0;
+  border-top: 1px solid black;
+  align-items: flex-start;
+}
+.proyecto-fila-vertical {
+  flex-direction: column;
+}
 .proyecto-texto {
-    flex: 1;
+  flex: 1;
 }
 
+.proyecto-bullet {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.proyecto-desc {
+  max-width: 591px;
+  font-size: 0.81rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: black;
+}
+
+/* imagenes del proyecto */
 .proyecto-imagenes {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.proyecto-imagenes img {
-    width: 100%;
-    height: auto;
-    display: block;
+.proyecto-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
-/* FOOTER */
+.proyecto-imgs img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.proyecto-imgs img:hover {
+  transform: scale(1.01);
+}
+
+.proyecto-imgs.grid-2 img {
+  width: calc(50% - 2px);
+}
+
+.proyecto-imgs.grid-1 img {
+  width: 100%;
+  max-width: 620px;
+}
+
+/* afiches verticales */
+.img-vertical {
+  height: 800px !important;
+  object-position: center top;
+}
+
+
+/* ===== BOTON VER PROYECTO ===== */
+
+.btn-ver {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.81rem;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 8px 20px;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-ver:hover {
+  background: var(--purple);
+  color: white;
+  border-color: var(--purple);
+}
+
+
+/* ===== CONTACTO ===== */
+
+.contacto-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 60px 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.contacto-izq {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* texto de contacto izquierda */
+.contacto-izq p {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: var(--gray-mid);
+}
+
+/* datos de contacto directo */
+.contacto-dato {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contacto-dato .label {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  font-weight: 300;
+}
+
+.contacto-dato a,
+.contacto-dato span {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.94rem;
+  color: black;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contacto-dato a:hover {
+  color: var(--purple);
+}
+
+.contacto-form {
+  flex: 2;
+  background: #E8E8E8;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.875rem;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 12px 16px;
+  color: black;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: var(--purple);
+}
+
+.contacto-form textarea {
+  height: 140px;
+  resize: vertical;
+}
+
+.contacto-form .btn-enviar {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 1rem;
+  background: var(--bg);
+  border: 1px solid black;
+  padding: 10px 32px;
+  cursor: pointer;
+  align-self: flex-end;
+  color: black;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.contacto-form .btn-enviar:hover {
+  background: var(--purple);
+  color: white;
+  border-color: var(--purple);
+}
+
+/* mensaje de confirmacion */
+.mensaje-ok {
+  display: none;
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.81rem;
+  color: var(--purple);
+  padding: 8px 0;
+}
+
+
+/* ===== FOOTER ===== */
+
 footer {
-    margin-top: 80px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  background: var(--gray-light);
+  padding: 60px 144px 40px 158px;
 }
 
-footer h2 {
-    font-size: 1.7rem;
-    border-bottom: 1px solid rgb(58, 58, 58);
-    padding-bottom: 8px;
-    margin-bottom: 16px;
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footer-brand .star-sm {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 3.125rem;
+  color: var(--gray-dark);
+  line-height: 1;
 }
 
-footer ul {
-    display: flex;
-    gap: 80px;
-    list-style: none;
-    padding: 0;
+.footer-brand .name {
+  font-family: 'RST Reactor Italic', 'RST Reactor', 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1;
+  color: black;
 }
 
-footer a {
-    font-weight: 100;
-    font-style: italic;
-    color: rgb(51, 51, 51);
-    text-decoration: none;
+.footer-brand .tagline {
+  font-family: 'Consolas', monospace;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: black;
+  margin-top: 12px;
 }
 
-footer p {
-    display: flex;
-    justify-content: right;
-    margin-top: 16px;
-    font-size: 0.9rem;
-    color: rgb(160, 160, 160);
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.footer-nav ul li a {
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  font-size: 0.94rem;
+  color: var(--negro-nav);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-nav ul li a:hover {
+  color: var(--purple);
+}
+
+.footer-social {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* íconos SVG de redes sociales */
+.footer-social a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.footer-social a:hover img {
+  opacity: 0.5;
+}
+
+.footer-copy {
+  text-align: center;
+  color: var(--gray-footer);
+  font-size: 0.625rem;
+  font-family: 'DM Mono', monospace;
+  font-weight: 300;
+  margin-top: 24px;
+}
+
+.footer-social a img {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aparecer {
+  animation: aparecer 0.6s ease both;
+}
+
+.aparecer-2 {
+  animation: aparecer 0.6s 0.1s ease both;
+}
+
+.aparecer-3 {
+  animation: aparecer 0.6s 0.2s ease both;
+}
+
+.aparecer-4 {
+  animation: aparecer 0.6s 0.3s ease both;
+}
+/* ===== MAIN ===== */
+
+main {
+  padding-bottom: 80px;
+}
+
+
+/* ===== PORFOLIO GRILLA ===== */
+
+.categorias-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
+
+/* el li no agrega espacio extra */
+.categorias-grid li {
+  display: contents;
+}
+
+.categoria-celda {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px 66px 76px;
+  border-top: 1px solid black;
+  text-decoration: none;
+  color: black;
+  min-height: 285px;
+  transition: background 0.25s ease;
+}
+
+/* borde derecho en las celdas de la izquierda */
+
+
+.categoria-celda:hover {
+  background: var(--violeta-claro);
+}
+
+.categoria-celda:hover .categoria-nombre-grid {
+  color: var(--purple);
+}
+
+.categoria-celda:hover .categoria-ver {
+  color: black;
+}
+
+.categoria-nombre-grid {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--gray-dark);
+  line-height: 1;
+  margin-bottom: 12px;
+  transition: color 0.25s ease;
+}
+
+.categoria-detalle {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--gray-light);
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.categoria-ver {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--purple);
+  transition: color 0.25s ease;
+}
+
+/* ===== Esterella que gira ===== */
+.star-gira {
+  display: inline-block;
+  animation: girar 8s linear infinite;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

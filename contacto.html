@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✹</text></svg>">
+  <title>Contacto — Micaela Nuñez</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- nav -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li class="nav-portfolio">
+          <a href="porfolio.html">Porfolio</a>
+          <div class="desplegable">
+            <a href="branding.html">Branding</a>
+            <a href="editorial.html">Editorial</a>
+            <a href="afiches.html">Afiches</a>
+            <a href="ilustracion.html">Ilustración</a>
+          </div>
+        </li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- encabezado -->
+  <div class="encabezado-pagina aparecer">
+    <span class="star">✹</span>
+    <h1>Contacto</h1>
+    <p class="subtitle">Diseñadora gráfica &amp; Ilustradora — Buenos Aires, Argentina</p>
+  </div>
+
+  <!-- scrolling text -->
+  <div class="ticker-wrap">
+    <span class="ticker-text">
+      branding · editorial · afiches · identidad visual · diseño gráfico · hecho en argentina ·
+    branding · editorial · afiches · identidad visual · diseño gráfico · hecho en argentina ·
+    branding · editorial · afiches · identidad visual · diseño gráfico · hecho en argentina ·
+    branding · editorial · afiches · identidad visual · diseño gráfico · hecho en argentina ·
+    </span>
+  </div>
+
+  <!-- formulario -->
+  <main>
+    <div class="contacto-contenido">
+
+      <!-- columna izquierda -->
+      <div class="contacto-izq aparecer">
+        <div>
+          <p class="section-title">✹ Escribime</p>
+          <hr class="divider">
+          <p>Disponible para proyectos freelance,<br>colaboraciones y consultas.</p>
+        </div>
+        <div class="contacto-dato">
+          <span class="label">email</span>
+          <a href="mailto:micaela@ejemplo.com">micaela@ejemplo.com</a>
+        </div>
+        <div class="contacto-dato">
+          <span class="label">instagram</span>
+          <a href="https://www.instagram.com/xmicaelax_" target="_blank">@xmicaelax_</a>
+        </div>
+        <div class="contacto-dato">
+          <span class="label">behance</span>
+          <a href="https://www.behance.net/micaelabnz" target="_blank">micaelabnz</a>
+        </div>
+      </div>
+
+      <!-- formulario -->
+      <div class="contacto-form aparecer-2">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="email" id="email" placeholder="E-mail">
+        <textarea id="comentario" placeholder="Comentario"></textarea>
+        <p class="mensaje-ok" id="mensaje-ok">¡Mensaje enviado! Me contacto pronto.</p>
+        <button class="btn-enviar" onclick="enviarFormulario()">Enviar</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="star-sm">✹</div>
+        <div class="name">Micaela<br>Nuñez</div>
+        <div class="tagline">Diseño &amp; Comunicación visual</div>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="porfolio.html">Porfolio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+  <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+    <img src="img/iconos/linkedin.svg" alt="LinkedIn">
+  </a>
+  <a href="https://www.behance.net/micaelabnz" target="_blank" aria-label="Behance">
+    <img src="img/iconos/behance.svg" alt="Behance">
+  </a>
+  <a href="https://www.instagram.com/xmicaelax_" target="_blank" aria-label="Instagram">
+    <img src="img/iconos/instagram.svg" alt="Instagram">
+  </a>
+</div>
+    </div>
+    </div>
+    <p class="footer-copy">Cátedra Wischñevsky — 2026</p>
+  </footer>
+
+  <script>
+    function enviarFormulario() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const comentario = document.getElementById('comentario').value.trim();
+      const mensaje = document.getElementById('mensaje-ok');
+
+      if (nombre === '' || email === '' || comentario === '') {
+        alert('Por favor completá todos los campos.');
+        return;
+      }
+
+      mensaje.style.display = 'block';
+
+      document.getElementById('nombre').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('comentario').value = '';
+    }
+  </script>
+
+</body>
+</html>
