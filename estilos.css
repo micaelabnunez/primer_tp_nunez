@@ -523,6 +523,21 @@ nav ul li a.activo::after {
   object-position: center top;
 }
 
+.proyecto-imgs.grid-mixed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.proyecto-imgs.grid-mixed img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.proyecto-imgs.grid-mixed .full-width {
+  grid-column: 1 / -1;
+}
 
 /* ===== BOTON VER PROYECTO ===== */
 
@@ -808,7 +823,7 @@ main {
   list-style: none;
 }
 
-/* el li no agrega espacio extra */
+
 .categorias-grid li {
   display: contents;
 }
